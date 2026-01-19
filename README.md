@@ -43,7 +43,7 @@ Below shows the experiment result of our oss-3B version compared with other base
 Our latest internal version of HeartMuLa-7B achieves **comparable performance with Suno** in terms of musicality, fidelity and controllability. If you are interested, welcome to reach us out via heartmula.ai@gmail.com
 
 ## 📰 News
-
+- ⚖️**20 Jan. 2026** License update: We update the license of this repo and all related model weights to **Apache 2.0**.
 - 🚀 **14 Jan. 2026**  
   The official release of **HeartTranscriptor-oss** and the first **HeartMuLa-oss-3B** version along with our **HeartCodec-oss**.
 
@@ -175,14 +175,7 @@ This repository is developed on the basis of [ConversationTTS](https://github.co
 
 ## ⚖️ License & Ethics Statement
 
-This repository is licensed under the
-Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0).
-
-🔒 For non-commercial research and educational use only
-
-🚫 Any commercial use is strictly prohibited
-
-⚠️ Users are solely responsible for ensuring that generated content does not infringe any third-party copyrights
+This repository is licensed under the Apache 2.0 License.
 
 ---
 
