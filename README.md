@@ -1,3 +1,28 @@
+我们对原项目仅做了一些简单的修改，包括：
+
+1. 升级了一些依赖库，如 `transformers`、`torchtune` 等；
+2. 修复了一些 bug，如 `soundfile` 库的导入问题；
+3. 增加了一些示例代码，如 `gradio` 界面的使用示例；
+
+## 无需命令，一键安装
+
+推荐使用 魔当 (LM Downloader) https://seemts.com/ 一键安装。
+
+
+## 源码运行
+
+```bash
+git clone https://github.com/lmdown/heartlib-web-demo
+cd heartlib-web-demo
+pip install -r requirements.txt
+
+python src/app.py
+```
+
+当然也可以参考原始的readme文档，使用官方推荐的推理脚本。
+
+-------
+
 <p align="center">
     <picture>
         <source srcset="./assets/logo.png" media="(prefers-color-scheme: dark)">
