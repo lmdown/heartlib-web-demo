@@ -731,7 +731,7 @@ ui_text = {
         'mood_tags': '- **Mood:** happy, sad, romantic, energetic, calm, melancholic',
         'genre_tags': '- **Genre:** pop, rock, jazz, classical, electronic, folk',
         'tempo_tags': '- **Tempo:** fast, slow, upbeat, relaxed',
-        'atmospheric_context_tags': '- **Atmospheric/Context:** atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
+        'atmospheric_context_tags': '- **Atmospheric/Context:** wedding, atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
         'vocal_style_tags': '- **Vocal Style:** male_vocal, female_vocal, whisper, powerful, airy',
         'model': '**Model:**',
         'paper': '**Paper:**',
@@ -760,18 +760,18 @@ ui_text = {
         'generate_button': '生成音乐',
         'generated_music': '生成的音乐',
         'instructions': '## 使用说明',
-        'instruction_steps': '1. 输入带有结构标签的歌词，如 `[Verse]`, `[Chorus]`, `[Bridge]` 等\n2. 添加用逗号分隔的描述音乐风格的标签（例如：`钢琴,欢快,浪漫`）\n3. 根据需要调整生成参数\n4. 点击 "生成音乐" 并等待您的歌曲！',
-        'note': '*注意：生成时间可能需要几分钟，具体取决于时长和精度。*',
-        'tips': '### 获得更好结果的提示',
+        'instruction_steps': '1. 输入带有结构标签的歌词，如 `[Verse]`, `[Chorus]`, `[Bridge]` 等\n2. 用逗号分隔的描述音乐风格的标签（例如：`钢琴,欢快,浪漫`）\n3. 根据需要调整生成参数\n4. 点击 "生成音乐" ，等待您的歌曲！',
+        'note': '*注意：生成时间可能几分钟或更久，取决于硬件配置、时长和精度等因素。*',
+        'tips': '### 获得更好结果：',
         'tip_points': '- 使用带有章节标签的结构化歌词\n- 具体说明您的风格标签\n- 尝试不同的温度值以获得多样性\n- 较短的时长生成更快',
         'speed_optimization': '### 速度优化提示',
-        'speed_tips': '- **较短时长：** 减少最大时长以加快生成速度\n- **较高 Top-K：** 增加 top-k 值（例如 80-100）以加快采样速度\n- **较低温度：** 降低温度（例如 0.7-0.9）可以加快生成速度\n- **硬件加速：** 确保启用 CUDA 以获得 GPU 加速',
+        'speed_tips': '- **较短时长：** 减少最大时长以加快生成速度\n- **较高 Top-K：** 增加 top-k 值（例如 80-100）以加快采样速度\n- **较低温度：** 降低温度（例如 0.7-0.9）可以加快生成速度',
         'example_tags': '### 示例标签',
         'instrument_tags': '- **乐器：** piano, guitar, drums, synthesizer, violin, bass',
         'mood_tags': '- **情绪：** happy, sad, romantic, energetic, calm, melancholic',
         'genre_tags': '- **流派：** pop, rock, jazz, classical, electronic, folk',
         'tempo_tags': '- **Tempo：** fast, slow, upbeat, relaxed',
-        'atmospheric_context_tags': '- **场景/氛围:** atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
+        'atmospheric_context_tags': '- **场景/氛围:** wedding, atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
         'vocal_style_tags': '- **人声特征:** male_vocal, female_vocal, whisper, powerful, airy',
         'model': '**模型：**',
         'paper': '**论文：**',
@@ -798,12 +798,12 @@ with gr.Blocks(
     )
 
     with gr.Row():
-        with gr.Column(scale=2, min_width=600):
+        with gr.Column(scale=1, min_width=500):
             lyrics_input = gr.Textbox(
                 label=current_ui_text['lyrics_label'],
                 placeholder=current_ui_text['lyrics_placeholder'],
-                lines=8,
-                max_lines=13,
+                lines=9,
+                max_lines=14,
                 value=EXAMPLE_LYRICS,
                 show_label=True,
             )
@@ -815,6 +815,8 @@ with gr.Blocks(
                 info=current_ui_text['tags_info'],
                 show_label=True,
             )
+
+            generate_btn = gr.Button(current_ui_text['generate_button'], variant="primary", size="lg")
 
             with gr.Accordion(current_ui_text['advanced_settings'], open=False):
                 max_duration = gr.Slider(
@@ -853,9 +855,7 @@ with gr.Blocks(
                     info=current_ui_text['cfg_scale_info'],
                 )
 
-            generate_btn = gr.Button(current_ui_text['generate_button'], variant="primary", size="lg")
-
-        with gr.Column(scale=1, min_width=400):
+        with gr.Column(scale=1, min_width=500):
             audio_output = gr.Audio(
                 label=current_ui_text['generated_music'],
                 type="filepath",
@@ -879,12 +879,6 @@ with gr.Blocks(
 
             gr.Markdown(
                 f"""
-{current_ui_text['tips']}
-{current_ui_text['tip_points']}
-
-{current_ui_text['speed_optimization']}
-{current_ui_text['speed_tips']}
-
 {current_ui_text['example_tags']}
 {current_ui_text['instrument_tags']}
 {current_ui_text['mood_tags']}
@@ -892,6 +886,12 @@ with gr.Blocks(
 {current_ui_text['tempo_tags']}
 {current_ui_text['atmospheric_context_tags']}
 {current_ui_text['vocal_style_tags']}
+
+{current_ui_text['speed_optimization']}
+{current_ui_text['speed_tips']}
+
+{current_ui_text['tips']}
+{current_ui_text['tip_points']}
                 """
             )
 
