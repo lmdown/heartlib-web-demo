@@ -1,3 +1,5 @@
+# 中文说明
+
 我们对原项目仅做了一些简单的修改，包括：
 
 1. 升级了一些依赖库，如 `transformers`、`torchtune` 等；
@@ -6,8 +8,12 @@
 
 ## 无需命令，一键安装
 
-推荐使用 魔当 (LM Downloader) https://seemts.com/ 一键安装。
+推荐使用 魔当 (LM Downloader) https://seemts.com/ 一键安装。同时支持 Windows 和 macOS。
 
+在详情页右侧，可以看到精度选项，根据你的显卡显存选择合适精度。
+<img src="./lmd-assets/detail.jpg" width="90%">
+
+<img src="./lmd-assets/running.jpg" width="90%">
 
 ## 源码运行
 
@@ -20,6 +26,26 @@ python src/app.py
 ```
 
 当然也可以参考原始的readme文档，使用官方推荐的推理脚本。
+
+-------
+
+# Instruction 
+
+We've made only a few simple modifications to the original project, including:
+
+1. Updated some dependency libraries such as `transformers`, `torchtune`, etc.;
+2. Fixed some bugs, such as the import issue with the `soundfile` library;
+3. Added some example code, such as usage examples for the `gradio` interface;
+
+## No Commands Needed, One-Click Installation
+
+We recommend using LM Downloader https://seemts.com/ for one-click installation. It supports both Windows and macOS.
+
+On the right side of the details page, you can see precision options. Select the appropriate precision based on your graphics card memory.
+
+
+Same as the original project, you can refer to the original readme document for more instructions.
+
 
 -------
 
