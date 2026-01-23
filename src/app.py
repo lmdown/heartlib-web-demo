@@ -727,11 +727,11 @@ ui_text = {
         'speed_optimization': '### Speed Optimization Tips',
         'speed_tips': '- **Shorter Duration:** Reduce max duration for faster generation\n- **Higher Top-K:** Increase top-k value (e.g., 80-100) for faster sampling\n- **Lower Temperature:** Lower temperature (e.g., 0.7-0.9) can speed up generation\n- **Hardware Acceleration:** Ensure CUDA is enabled for GPU acceleration',
         'example_tags': '### Example Tags',
-        'instrument_tags': '- **Instruments:** piano, guitar, drums, synthesizer, violin, bass',
+        'instrument_tags': '- **Instruments:** electric guitar, piano, guitar, drums, synthesizer, violin, bass',
         'mood_tags': '- **Mood:** happy, sad, romantic, energetic, calm, melancholic',
         'genre_tags': '- **Genre:** pop, rock, jazz, classical, electronic, folk',
         'tempo_tags': '- **Tempo:** fast, slow, upbeat, relaxed',
-        'atmospheric_context_tags': '- **Atmospheric/Context:** wedding, atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
+        'atmospheric_context_tags': '- **Atmospheric/Context:** wedding, atmospheric, cinematic, lofi, cyberpunk, healing, dark, bright, nostalgic',
         'vocal_style_tags': '- **Vocal Style:** male_vocal, female_vocal, whisper, powerful, airy',
         'model': '**Model:**',
         'paper': '**Paper:**',
@@ -767,11 +767,11 @@ ui_text = {
         'speed_optimization': '### 速度优化提示',
         'speed_tips': '- **较短时长：** 减少最大时长以加快生成速度\n- **较高 Top-K：** 增加 top-k 值（例如 80-100）以加快采样速度\n- **较低温度：** 降低温度（例如 0.7-0.9）可以加快生成速度',
         'example_tags': '### 示例标签',
-        'instrument_tags': '- **乐器：** piano, guitar, drums, synthesizer, violin, bass',
+        'instrument_tags': '- **乐器：** electric guitar, piano, guitar, drums, synthesizer, violin, bass',
         'mood_tags': '- **情绪：** happy, sad, romantic, energetic, calm, melancholic',
         'genre_tags': '- **流派：** pop, rock, jazz, classical, electronic, folk',
         'tempo_tags': '- **Tempo：** fast, slow, upbeat, relaxed',
-        'atmospheric_context_tags': '- **场景/氛围:** wedding, atmospheric, cinematic, lofi, cyberpunk healing dark, bright, nostalgic',
+        'atmospheric_context_tags': '- **场景/氛围:** wedding, atmospheric, cinematic, lofi, cyberpunk, healing, dark, bright, nostalgic',
         'vocal_style_tags': '- **人声特征:** male_vocal, female_vocal, whisper, powerful, airy',
         'model': '**模型：**',
         'paper': '**论文：**',
@@ -818,7 +818,7 @@ with gr.Blocks(
 
             generate_btn = gr.Button(current_ui_text['generate_button'], variant="primary", size="lg")
 
-            with gr.Accordion(current_ui_text['advanced_settings'], open=False):
+            with gr.Accordion(current_ui_text['advanced_settings'], open=True):
                 max_duration = gr.Slider(
                     minimum=20,
                     maximum=360,
