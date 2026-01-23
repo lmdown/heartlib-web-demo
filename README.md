@@ -64,6 +64,11 @@ Same as the original project, you can refer to the original readme document for 
         <source srcset="./assets/badge.svg" media="(prefers-color-scheme: dark)">
         <img src="./assets/badge.svg" width="20px">
     </picture></a>
+    <br>
+    <a href="https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123"> HeartMuLa-RL-oss-3B-20260123 🤗</a> &nbsp;|&nbsp; <a href="https://modelscope.cn/models/HeartMuLa/HeartMuLa-RL-oss-3B-20260123">HeartMuLa-RL-oss-3B-20260123 <picture>
+        <source srcset="./assets/badge.svg" media="(prefers-color-scheme: dark)">
+        <img src="./assets/badge.svg" width="20px">
+    </picture></a>
     
 </p>
 
@@ -96,6 +101,9 @@ Our latest internal version of HeartMuLa-7B achieves **comparable performance wi
 ## 📰 News
 Join on Discord! [<img alt="join discord" src="https://img.shields.io/discord/842440537755353128?color=%237289da&logo=discord"/>](https://discord.gg/BKXF5FgH)
 
+- 🚀 **23 Jan. 2026**
+
+    By leveraging Reinforcement Learning, we have continuously refined our model and are proud to officially release **HeartMuLa-RL-oss-3B-20260123**. This version is designed to achieve more precise control over styles and tags. Simultaneously, we are launching **HeartCodec-oss-20260123**, which optimizes audio decoding quality.
 
 - 🫶 **20 Jan. 2026** 
     
@@ -136,11 +144,23 @@ Download our pretrained checkpoints from huggingface or modelscope using the fol
 ```
 # if you are using huggingface
 hf download --local-dir './ckpt' 'HeartMuLa/HeartMuLaGen'
+
+## To use version released on 20260123 (recommended)
+hf download --local-dir './ckpt/HeartMuLa-oss-3B' 'HeartMuLa/HeartMuLa-RL-oss-3B-20260123'
+hf download --local-dir './ckpt/HeartCodec-oss' HeartMuLa/HeartCodec-oss-20260123
+
+## To use oss-3B version
 hf download --local-dir './ckpt/HeartMuLa-oss-3B' 'HeartMuLa/HeartMuLa-oss-3B'
 hf download --local-dir './ckpt/HeartCodec-oss' 'HeartMuLa/HeartCodec-oss'
 
 # if you are using modelscope
 modelscope download --model 'HeartMuLa/HeartMuLaGen' --local_dir './ckpt'
+
+## To use version released on 20260123 (recommended)
+modelscope download --model 'HeartMuLa/HeartMuLa-RL-oss-3B-20260123' --local_dir './ckpt/HeartMuLa-oss-3B'
+modelscope download --model 'HeartMuLa/HeartCodec-oss-20260123' --local_dir './ckpt/HeartCodec-oss'
+
+## To use oss-3B version
 modelscope download --model 'HeartMuLa/HeartMuLa-oss-3B' --local_dir './ckpt/HeartMuLa-oss-3B'
 modelscope download --model 'HeartMuLa/HeartCodec-oss' --local_dir './ckpt/HeartCodec-oss'
 ```
@@ -237,6 +257,7 @@ Just another day
 Every single day
 ```
 
+Regarding tags, check this [issue](https://github.com/HeartMuLa/heartlib/issues/17) for reference.
 Our different tags are comma-separated without spaces as illustrated below:
 ```txt
 piano,happy,wedding,synthesizer,romantic
