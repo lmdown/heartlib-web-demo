@@ -821,7 +821,7 @@ with gr.Blocks(
             with gr.Accordion(current_ui_text['advanced_settings'], open=False):
                 max_duration = gr.Slider(
                     minimum=20,
-                    maximum=240,
+                    maximum=360,
                     value=120,
                     step=10,
                     label=current_ui_text['max_duration_label'],
